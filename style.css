@@ -62,14 +62,14 @@ body{
 
     display:flex;
 
-    justify-content:center;
+    justify-content:flex-start;
 
     align-items:center;
 
     flex-direction:column;
 
     animation:fadeIn .8s ease;
-    padding-top:20px;
+    padding-top:10px;
     padding-bottom:10px;
     
     
@@ -136,7 +136,7 @@ body{
 
     width:90%;
 
-    max-width:700px;
+    max-width:600px;
 
     background:#FFFDE7;
 
@@ -213,13 +213,13 @@ p{
 
     background:#f6fff7;
 
-    padding:15px;
+    padding:10px;
 
     border-radius:15px;
 
     border:2px dashed var(--verde);
 
-    margin-bottom:25px;
+    margin-bottom:15px;
 
 }
 
@@ -249,7 +249,7 @@ button{
 
     display:block;
 
-    margin:15px auto;
+    margin:8px auto;
 
     min-height:55px;
 
@@ -319,7 +319,7 @@ button:active{
     margin:auto;
 
     padding:5px;
-    margin-top:20px;
+    margin-top:15px;
 }
 
 #barraProgreso{
