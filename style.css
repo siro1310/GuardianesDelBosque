@@ -634,7 +634,7 @@ button:active{
 
     text-align:center;
     padding:20px;
-    margin-top:15px;
+    margin-top:5px;
     background:#2E7D32;
     color:white;
     font-size:14px;
@@ -645,8 +645,9 @@ button:active{
     bottom:0;
 }
 #pantallaFinal button{
-
     margin:4px auto;
-
+}
+#pantallaFinal{
+    padding-bottom:20px;
 }
 
