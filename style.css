@@ -30,7 +30,6 @@ body{
 
     font-family:'Trebuchet MS',sans-serif;
     font-size:16px;
-
     background:
     linear-gradient(
     180deg,
@@ -51,9 +50,7 @@ body{
 .pantalla{
 
     display:none;
-
     width:100%;
-
     padding:2px;
 
 }
@@ -129,12 +126,12 @@ body{
 .contenedor-final,
 .recompensa{
 
-    width:90%;
-    max-width:800px;
+    width:95%;
+    max-width:950px;
     background:#FFFDE7;
     border-radius:var(--radio);
-    padding:20px;
-    margin:10px auto;
+    padding:15px;
+    margin:5px auto;
     border:5px solid #2E7D32;
 }
 
@@ -157,7 +154,7 @@ h1{
 h2{
 
     text-align:center;
-    font-size:2.2rem;
+    font-size:1.8rem;
     color:var(--verde-oscuro);
     margin-bottom:15px;
 
@@ -166,9 +163,9 @@ h2{
 p{
 
     text-align:center;
-    margin-bottom:15px;
-    font-size:1.5rem;
-    line-height:1.8;
+    margin-bottom:10px;
+    font-size:1.2rem;
+    line-height:1.4;
 
 }
 
@@ -230,14 +227,12 @@ button{
 }
 
 button:hover{
-
     transform:translateY(-3px);
     background:var(--verde-oscuro);
 
 }
 
 button:active{
-
     transform:scale(.95);
 
 }
@@ -408,8 +403,8 @@ button:active{
     display:grid;
     grid-template-columns:
     repeat(4,1fr);
-    gap:15px;
-    margin-top:25px;
+    gap:10px;
+    margin-top:15px;
 
 }
 
@@ -421,7 +416,7 @@ button:active{
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:2rem;
+    font-size:1.5rem;
     color:white;
     cursor:pointer;
     transition:.3s;
@@ -449,7 +444,7 @@ button:active{
 #pistaCarrera{
 
     width:100%;
-    height:120px;
+    height:90px;
     background:#e3f2fd;
     border-radius:20px;
     position:relative;
@@ -461,7 +456,7 @@ button:active{
 
     position:absolute;
     left:0;
-    top:35px;
+    top:20px;
     font-size:3rem;
     transition:1s;
     animation:bounce 1s infinite;
@@ -480,7 +475,7 @@ button:active{
     #FFD54F,
     #FFB300);
     color:#333;
-    padding:20px;
+    padding:12px;
     border-radius:20px;
     font-size:1.2rem;
     font-weight:bold;
@@ -497,7 +492,7 @@ button:active{
 
 #certificado{
 
-    margin-top:30px;
+    margin-top:15px;
     padding:30px;
     border:8px double var(--verde);
     border-radius:20px;
@@ -623,6 +618,8 @@ button:active{
     font-weight:bold;
     border-top:4px solid #FFD54F;
     width:100%;
+    position:relative;
+    bottom:0;
 }
 
 
