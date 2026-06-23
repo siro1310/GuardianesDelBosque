@@ -1,0 +1,777 @@
+/* ==========================================
+   GUARDIANES DEL BOSQUE MÁGICO DELUXE
+   CSS PROFESIONAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --verde:#4CAF50;
+    --verde-oscuro:#2E7D32;
+    --azul:#29B6F6;
+    --amarillo:#FFD54F;
+    --naranja:#FF9800;
+    --rojo:#EF5350;
+
+    --blanco:#ffffff;
+
+    --sombra:0 8px 20px rgba(0,0,0,.15);
+
+    --radio:20px;
+
+}
+
+body{
+
+    font-family:'Trebuchet MS',sans-serif;
+    font-size:28px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #87CEEB,
+    #4FC3F7,
+    #81C784);
+    color:#333;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   PANTALLAS
+========================================== */
+
+.pantalla{
+
+    display:none;
+
+    width:100%;
+
+    padding:10px;
+
+}
+
+.pantalla.activa{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    animation:fadeIn .8s ease;
+    padding-top:60px;
+
+}
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@keyframes bounce{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================================
+   CONTENEDOR GENERAL
+========================================== */
+
+.contenedor-principal,
+.contenedor-juego,
+.contenedor-final,
+.recompensa{
+
+    width:95%;
+
+    max-width:900px;
+
+    background:#FFFDE7;
+
+    border-radius:var(--radio);
+
+    padding:25px;
+
+    margin:10px auto;
+    border:5px solid #2E7D32;
+}
+
+/* ==========================================
+   TITULOS
+========================================== */
+
+h1{
+
+    text-align:center;
+
+    font-size:3.8rem;
+
+    color:#1B5E20;
+
+    text-shadow:
+    3px 3px 0px #FFD54F,
+    6px 6px 10px rgba(0,0,0,.2);
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    text-align:center;
+    font-size:2.2rem;
+
+    color:var(--verde-oscuro);
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    font-size:1.5rem;
+
+    line-height:1.8;
+
+}
+
+.mensajeInicio{
+
+    font-size:1.6rem;
+
+    color:#E65100;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    margin-top:15px;
+
+}
+
+/* ==========================================
+   HISTORIA
+========================================== */
+
+.historia{
+
+    background:#f6fff7;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:2px dashed var(--verde);
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px 35px;
+
+    border-radius:15px;
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:var(--verde);
+
+    transition:.3s;
+
+    display:block;
+
+    margin:15px auto;
+
+    min-height:70px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #FF9800,
+    #F57C00);
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--verde-oscuro);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ==========================================
+   BARRA SUPERIOR
+========================================== */
+
+#barraEstado{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    padding:8px;
+
+    margin-top:5px;
+
+}
+
+.estado-item{
+
+    background:#f3fff3;
+
+    padding:10px 18px;
+
+    border-radius:15px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   BARRA DE PROGRESO
+========================================== */
+
+#contenedorProgreso{
+
+    width:95%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:5px;
+    margin-top:20px;
+}
+
+#barraProgreso{
+
+    width:100%;
+
+    height:25px;
+
+    background:#ddd;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+#progresoActual{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    #4CAF50,
+    #8BC34A);
+
+    transition:1s;
+
+}
+
+/* ==========================================
+   NIVEL 1
+========================================== */
+
+.zona-residuos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+
+}
+
+.residuo{
+
+    width:100px;
+
+    height:100px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:3rem;
+
+    background:#fff9c4;
+
+    border-radius:20px;
+
+    cursor:grab;
+
+    box-shadow:var(--sombra);
+
+}
+
+.residuo:hover{
+
+    animation:pulse .8s infinite;
+
+}
+
+.contenedores{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.contenedor{
+
+    width:180px;
+
+    height:140px;
+
+    background:#e8f5e9;
+
+    border:3px dashed var(--verde);
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   NIVEL 2
+========================================== */
+
+#accionesBosque{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.accion{
+
+    background:#f9f9f9;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:var(--sombra);
+
+}
+
+.accion:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.accion.seleccionada{
+
+    border:4px solid var(--verde);
+
+}
+
+/* ==========================================
+   MEMORAMA
+========================================== */
+
+#tableroMemorama{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.carta{
+
+    aspect-ratio:1;
+
+    background:var(--azul);
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.carta:hover{
+
+    transform:scale(1.05);
+
+}
+
+.carta.revelada{
+
+    background:white;
+
+    color:black;
+
+    border:3px solid var(--verde);
+
+}
+
+/* ==========================================
+   CARRERA DEL AGUA
+========================================== */
+
+#pistaCarrera{
+
+    width:100%;
+
+    height:120px;
+
+    background:#e3f2fd;
+
+    border-radius:20px;
+
+    position:relative;
+
+    margin-top:30px;
+
+}
+
+#personaje{
+
+    position:absolute;
+
+    left:0;
+
+    top:35px;
+
+    font-size:3rem;
+
+    transition:1s;
+
+    animation:bounce 1s infinite;
+
+}
+
+/* ==========================================
+   INSIGNIAS
+========================================== */
+
+.insignia{
+
+    background:
+    linear-gradient(
+    135deg,
+    #FFD54F,
+    #FFB300);
+
+    color:#333;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    margin:20px auto;
+
+    max-width:400px;
+
+    box-shadow:var(--sombra);
+
+}
+
+/* ==========================================
+   CERTIFICADO
+========================================== */
+
+#certificado{
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border:8px double var(--verde);
+
+    border-radius:20px;
+
+    background:#f7fff7;
+
+}
+
+#certificado h2{
+
+    font-size:2rem;
+
+}
+
+/* ==========================================
+   PANEL INSIGNIAS
+========================================== */
+
+#panelInsignias{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+/* ==========================================
+   CRONOMETRO
+========================================== */
+
+#cronometro{
+
+    background:#fff3cd;
+
+    width:220px;
+
+    margin:15px auto;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   MENSAJES
+========================================== */
+
+.correcto{
+
+    color:green;
+
+    font-weight:bold;
+
+}
+
+.incorrecto{
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+    .contenedor-principal,
+    .contenedor-juego,
+    .contenedor-final,
+    .recompensa{
+
+        padding:20px;
+
+    }
+
+    #tableroMemorama{
+
+        grid-template-columns:
+        repeat(3,1fr);
+
+    }
+
+    .contenedor{
+
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    #tableroMemorama{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    button{
+
+        width:100%;
+    }
+
+}
+
+#footerPrincipal{
+
+    text-align:center;
+
+    padding:20px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    border-top:4px solid #FFD54F;
+
+    width:100%;
+}
+
+html,
+body{
+    min-height:100vh;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+#footerPrincipal{
+    margin-top:auto;
+}

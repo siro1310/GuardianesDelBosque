@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardianes del Bosque Mágico Deluxe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description"
+        content="Recurso Educativo Digital Abierto gamificado para educación infantil sobre el cuidado del medio ambiente.">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- PANTALLA DE INICIO -->
+    <!-- ========================= -->
+
+    <section id="pantallaInicio" class="pantalla activa">
+
+        <div class="contenedor-principal">
+
+            <h1>🌳 Guardianes del Bosque Mágico 🌳</h1>
+
+            <div class="historia">
+
+                <p>
+                    El Bosque Mágico necesita tu ayuda.
+                </p>
+
+                <p>
+                    Los animales, los árboles y los ríos están en peligro.
+                </p>
+
+                <p>
+                    Completa los desafíos y conviértete en un verdadero
+                    Guardián Ambiental.
+                </p>
+
+            </div>
+
+            <button id="btnComenzar">
+                🚀 Comenzar Aventura
+            </button>
+
+            <p class="mensajeInicio">
+                🎯 Completa los 4 desafíos y obtén las 4 insignias mágicas.
+            </p>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- CABECERA GENERAL -->
+        <!-- ========================= -->
+
+        <header id="barraEstado">
+
+            <div class="estado-item">
+                ⭐ Puntos:
+                <span id="puntosTotales">0</span>
+            </div>
+
+            <div class="estado-item">
+                🪙 Monedas:
+                <span id="monedasTotales">0</span>
+            </div>
+
+            <div class="estado-item">
+                🏅 Insignias:
+                <span id="contadorInsignias">0</span>
+            </div>
+
+        </header>
+
+        <!-- ========================= -->
+        <!-- BARRA DE PROGRESO -->
+        <!-- ========================= -->
+
+        <section id="contenedorProgreso">
+
+            <div id="barraProgreso">
+
+                <div id="progresoActual"></div>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+    
+    <!-- ================================================= -->
+    <!-- NIVEL 1 -->
+    <!-- RECICLAJE INTELIGENTE -->
+    <!-- ================================================= -->
+
+    <section id="nivel1" class="pantalla">
+
+        <div class="contenedor-juego">
+
+            <h2>♻️ Nivel 1: Reciclaje Inteligente</h2>
+
+            <p>
+                Arrastra cada residuo al contenedor correcto.
+            </p>
+
+            <div class="zona-residuos">
+
+                <div class="residuo" draggable="true" data-tipo="plastico">
+                    🧴
+                </div>
+
+                <div class="residuo" draggable="true" data-tipo="papel">
+                    📄
+                </div>
+
+                <div class="residuo" draggable="true" data-tipo="organico">
+                    🍎
+                </div>
+
+            </div>
+
+            <div class="contenedores">
+
+                <div class="contenedor" data-tipo="plastico">
+                    ♻️ Plástico
+                </div>
+
+                <div class="contenedor" data-tipo="papel">
+                    📚 Papel
+                </div>
+
+                <div class="contenedor" data-tipo="organico">
+                    🌱 Orgánico
+                </div>
+
+            </div>
+
+            <div id="resultadoNivel1"></div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- PANTALLA RECOMPENSA 1 -->
+    <!-- ================================================= -->
+
+    <section id="recompensa1" class="pantalla">
+
+        <div class="recompensa">
+
+            <h2>🎉 ¡Excelente Trabajo!</h2>
+
+            <p>
+                Has obtenido la insignia:
+            </p>
+
+            <div class="insignia">
+                ♻️ Reciclador Experto
+            </div>
+
+            <button id="btnNivel2">
+                Siguiente Nivel ➜
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- NIVEL 2 -->
+    <!-- SALVA EL BOSQUE -->
+    <!-- ================================================= -->
+
+    <section id="nivel2" class="pantalla">
+
+        <div class="contenedor-juego">
+
+            <h2>🌲 Nivel 2: Salva el Bosque</h2>
+
+            <p>
+                Selecciona únicamente las acciones que ayudan a cuidar la naturaleza.
+            </p>
+
+            <div id="accionesBosque">
+
+            </div>
+
+            <button id="verificarNivel2">
+                Verificar
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- RECOMPENSA NIVEL 2 -->
+    <!-- ================================================= -->
+
+    <section id="recompensa2" class="pantalla">
+
+        <div class="recompensa">
+
+            <h2>🌲 Protector del Bosque</h2>
+
+            <div class="insignia">
+                🌳 Protector del Bosque
+            </div>
+
+            <button id="btnNivel3">
+                Siguiente Nivel ➜
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- NIVEL 3 -->
+    <!-- MEMORAMA -->
+    <!-- ================================================= -->
+
+    <section id="nivel3" class="pantalla">
+
+        <div class="contenedor-juego">
+
+            <h2>🧠 Nivel 3: Memorama Ambiental</h2>
+
+            <p>
+                Encuentra todas las parejas.
+            </p>
+
+            <div id="cronometro">
+
+                Tiempo:
+                <span id="tiempoMemorama">60</span>
+
+            </div>
+
+            <div id="tableroMemorama">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- RECOMPENSA NIVEL 3 -->
+    <!-- ================================================= -->
+
+    <section id="recompensa3" class="pantalla">
+
+        <div class="recompensa">
+
+            <h2>🧠 Maestro de la Memoria</h2>
+
+            <div class="insignia">
+                🐾 Amigo de los Animales
+            </div>
+
+            <button id="btnNivel4">
+                Siguiente Nivel ➜
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- NIVEL 4 -->
+    <!-- CARRERA DEL AGUA -->
+    <!-- ================================================= -->
+
+    <section id="nivel4" class="pantalla">
+
+        <div class="contenedor-juego">
+
+            <h2>💧 Nivel 4: Carrera del Agua</h2>
+
+            <p>
+                Responde correctamente para avanzar.
+            </p>
+
+            <div id="pistaCarrera">
+
+                <div id="personaje">
+                    🐢
+                </div>
+
+            </div>
+
+            <div id="preguntaCarrera">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- PANTALLA FINAL -->
+    <!-- ================================================= -->
+
+    <section id="pantallaFinal" class="pantalla">
+
+        <div class="contenedor-final">
+
+            <h1>
+                🏆 Misión Completada
+            </h1>
+
+            <p>
+                Has salvado el Bosque Mágico.
+            </p>
+
+            <div id="panelInsignias">
+
+            </div>
+
+            <div id="certificado">
+
+                <h2>📜 Certificado Ambiental</h2>
+
+                <p>
+                    Este certificado reconoce la participación exitosa
+                    en todos los desafíos ambientales.
+                </p>
+            </div>
+
+            <button id="btnDescargarCertificado">
+                Descargar Certificado
+            </button>
+
+            <button id="btnVolverInicio">
+                Volver al Inicio
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- AUDIO -->
+
+    <audio id="sonidoCorrecto" src="sonidos/correcto.wav"></audio>
+
+    <audio id="sonidoIncorrecto" src="sonidos/incorrecto.wav"></audio>
+
+    <audio id="sonidoVictoria" src="sonidos/victoria.wav"></audio>
+
+    <audio id="sonidoMoneda" src="sonidos/moneda.mp3"></audio>
+
+    <footer id="footerPrincipal">
+
+        🌳 Guardianes del Bosque Mágico Deluxe
+
+        <br>
+
+        © 2026 Todos los derechos reservados
+
+        <br>
+
+        Desarrollado por Andy Freiner Hoyos
+
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
