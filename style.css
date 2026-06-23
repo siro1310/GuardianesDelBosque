@@ -70,6 +70,7 @@ body{
 }
 #pantallaFinal .contenedor-final{
     margin-bottom:40px;
+    padding-bottom:10px;
 }
 
 
@@ -414,7 +415,7 @@ button:active{
     display:grid;
     grid-template-columns:
     repeat(4,160px);
-    gap:8px;
+    gap:6px;
     margin-top:10px;
     justify-content:center;
 
@@ -432,8 +433,8 @@ button:active{
     color:white;
     cursor:pointer;
     transition:.3s;
-    width:160px;
-    height:160px;
+    width:145px;
+    height:145px;
     font-weight:bold;
 }
 
@@ -510,19 +511,23 @@ button:active{
 
 #certificado{
 
-    margin-top:10px;
-    padding:15px;
+    margin-top:8px;
+    padding:10px;
     border:8px double var(--verde);
     border-radius:20px;
     background:#f7fff7;
 
 }
-
 #certificado h2{
-
     font-size:1.5rem;
+}
+#certificado p{
+    margin-bottom:0;
+    font-size:1rem;
+    line-height:1.2;
 
 }
+
 
 /* ==========================================
    PANEL INSIGNIAS
@@ -639,5 +644,9 @@ button:active{
     position:relative;
     bottom:0;
 }
+#pantallaFinal button{
 
+    margin:6px auto;
+
+}
 
