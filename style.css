@@ -538,9 +538,8 @@ button:active{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:15px;
-    margin-top:25px;
-
+    gap:10px;
+    margin-top:15px;
 }
 
 /* ==========================================
@@ -648,6 +647,6 @@ button:active{
     margin:4px auto;
 }
 #pantallaFinal{
-    padding-bottom:20px;
+    padding-bottom:30px;
 }
 
