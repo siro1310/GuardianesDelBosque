@@ -748,12 +748,13 @@ button:active{
     text-align:center;
 
     padding:20px;
+    margin-top:15px;
 
     background:#2E7D32;
 
     color:white;
 
-    font-size:18px;
+    font-size:14px;
 
     font-weight:bold;
 
@@ -762,16 +763,4 @@ button:active{
     width:100%;
 }
 
-html,
-body{
-    min-height:100vh;
-}
 
-body{
-    display:flex;
-    flex-direction:column;
-}
-
-#footerPrincipal{
-    margin-top:auto;
-}
