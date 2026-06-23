@@ -135,15 +135,10 @@ body{
 .recompensa{
 
     width:90%;
-
-    max-width:600px;
-
+    max-width:900px;
     background:#FFFDE7;
-
     border-radius:var(--radio);
-
     padding:20px;
-
     margin:10px auto;
     border:5px solid #2E7D32;
 }
@@ -155,15 +150,11 @@ body{
 h1{
 
     text-align:center;
-
     font-size:1.9rem;
-
     color:#1B5E20;
-
     text-shadow:
     3px 3px 0px #FFD54F,
     6px 6px 10px rgba(0,0,0,.2);
-
     margin-bottom:20px;
 
 }
@@ -172,9 +163,7 @@ h2{
 
     text-align:center;
     font-size:2.2rem;
-
     color:var(--verde-oscuro);
-
     margin-bottom:15px;
 
 }
@@ -182,25 +171,17 @@ h2{
 p{
 
     text-align:center;
-
     margin-bottom:15px;
-
     font-size:1.5rem;
-
     line-height:1.8;
 
 }
 
 .mensajeInicio{
-
     font-size:1.6rem;
-
     color:#E65100;
-
     font-weight:bold;
-
     text-align:center;
-
     margin-top:15px;
 
 }
@@ -219,6 +200,14 @@ p{
     margin-bottom:15px;
 
 }
+.historia p{
+
+    margin:8px 0;
+    line-height:1.3;
+    text-align:center;
+    font-size:1.05rem;
+
+}
 
 /* ==========================================
    BOTONES
@@ -227,29 +216,17 @@ p{
 button{
 
     border:none;
-
     cursor:pointer;
-
     padding:18px 35px;
-
     border-radius:15px;
-
     font-size:1.1rem;
-
     font-weight:bold;
-
     color:white;
-
     background:var(--verde);
-
     transition:.3s;
-
     display:block;
-
     margin:8px auto;
-
     min-height:55px;
-
     background:
     linear-gradient(
     135deg,
