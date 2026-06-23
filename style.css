@@ -764,7 +764,7 @@ button:active{
 
 html,
 body{
-    min-height:20vh;
+    min-height:100vh;
 }
 
 body{
